@@ -1,0 +1,4 @@
+#!/bin/bash
+four_digit_number=$1
+touch hash_output.txt
+echo -n "$four_digit_number" | sha256sum | awk '{print $1}' > hash_output.txt
